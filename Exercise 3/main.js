@@ -1,27 +1,26 @@
-function triangle(){
-//khai báo biến 
-var a = +document.getElementById("firstside").value*1;
-var b = +document.getElementById("secondside").value*1;
-var c = +document.getElementById("thirdside").value*1;
-
-
-// Xử lý 
-
-if (a===b===c){
-    document.getElementById("alert").innerHTML = "<p>" +Tam giác đều+ "</p>";
-}
-else if (a===b|| b===c|| a===c){
-    document.getElementById("alert").innerHTML = "<p>" +Tam giác cân+ "</p>";
-  }
-
-if ( Math.pow(a, 2) == Math.pow(b, 2)+ Math.pow(c, 2)){
-    document.getElementById("alert").innerHTML = "<p>" +Tam giác vuông+ "</p>";
-
-}
-else if (Math.pow(b, 2) == Math.pow(a, 2)+ Math.pow(c, 2)){
-    document.getElementById("alert").innerHTML = "<p>" +Tam giác vuông+ "</p>";
-}
-else if (Math.pow(c, 2) == Math.pow(a, 2)+ Math.pow(b, 2)){
-    document.getElementById("alert").innerHTML = "<p>" +Tam giác vuông+ "</p>";
-}
-}
+document.getElementById("count").onclick = function(){
+    // Input:  
+    var number1 = +document.getElementById("number1").value;
+    var number2 = +document.getElementById("number2").value;
+    var number3 = +document.getElementById("number3").value;
+  
+    // Process
+    var evenNumber = 0;
+    var oddNumber = 0;
+  
+    if (number1 % 2 == 0) {
+      evenNumber++;
+    }else {oddNumber++;}
+  
+    if (number2 % 2 == 0) {
+      evenNumber++;
+    }else {oddNumber++;}
+  
+    if (number3 % 2 == 0) {
+      evenNumber++;
+    }else {oddNumber++;}
+  
+    // Output
+    document.getElementById("count").innerHTML =
+      "Số lượng số chẵn: " + evenNumber + "Số lượng số lẻ :" + oddNumber;
+  };
